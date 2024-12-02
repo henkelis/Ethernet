@@ -88,7 +88,7 @@ void EthernetClass::hardreset()
 
 int EthernetClass::begin(uint8_t *mac, unsigned long timeout, unsigned long responseTimeout)
 {
-  DhcpClass s_dhcp;
+  static DhcpClass s_dhcp;
   _dhcp = &s_dhcp;
 
   // Initialise the basic info
